@@ -40,9 +40,37 @@ echo $output; -> hello brittany!
 
 $output = ucwords('hello, bit!');
 echo $output; -> Hello, Bit!
-*/
 // replace all occurences of a search string. str_replace(original, replacement, wholeString)
 $text = 'Hello, World';
 $output = str_replace('World', 'Humans', $text);
 echo $output;
+// check if value is a string is_string
+$val = 'Hello';
+$output = is_string($val); -> 1
+echo $output;
+
+$values = [true, false, null, "Hello", 21, 32, 0, '0', 90.23, "34"];
+
+foreach($values as $value) {
+    if(is_string($value)){
+        print "<br> {$value} is a string";
+    }
+}
+*/
+$string = "I'm baby listicle irony kogi, art party kinfolk waistcoat 
+austin whatever adaptogen echo park salvia fingerstache cold-pressed. 
+Lumbersexual photo booth tofu scenester try-hard crucifix keffiyeh 
+vaporware yr listicle sriracha selfies. Meh chartreuse taiyaki, 
+humblebrag keffiyeh helvetica sustainable actually palo santo iPhone 
+marfa. Tumblr hot chicken hashtag knausgaard lyft offal street art 
+scenester succulents whatever kale chips. Coloring book plaid l
+etterpress typewriter chicharrones humblebrag kickstarter, lomo 
+semiotics mumblecore lo-fi locavore shaman. Shabby chic chillwave 
+hot chicken, fingerstache meditation fixie subway tile microdosing. 
+Cornhole man bun venmo meggings plaid tilde cray gluten-free.";
+
+$compressed =gzcompress($string);
+echo $compressed;
+$original = gzuncompress($compressed);
+echo $original;
 ?>
