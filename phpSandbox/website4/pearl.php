@@ -1,10 +1,7 @@
-<?
+<?php
     session_start();
     $name = $_SESSION['name'];
     $email = $_SESSION['email'];
-
-// print_r($_SESSION);
-
 
 ?>
 
@@ -16,8 +13,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h5>Thank you <? echo $name; ?> 
-    you have subscribed with the email <? $email; ?></h5>
+    <h5>Thank you <?php echo $name; ?> 
+    you have subscribed with the email <?php echo $email; ?></h5>
     
 </body>
 </html>
